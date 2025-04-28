@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Location Picker App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A professional full-stack React.js application for location management.  
+Built with a clean and scalable architecture, featuring authentication, map integration, and location editing.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📋 Features
 
-### `npm start`
+- Login with email and password (using backend API)
+- Session storage token management
+- Protected routes (Home, Locations, Edit Location)
+- Location picking on interactive Leaflet map
+- Upload location images
+- View location details (including uploaded images)
+- Drag markers to update location
+- Edit existing locations
+- Responsive UI using Material-UI (MUI)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Tech Stack
 
-### `npm test`
+- React.js (Vite/Cra template)
+- React Router DOM
+- Material-UI (MUI)
+- Redux Toolkit (state management)
+- React Hook Form (form management & validation)
+- Leaflet.js & React-Leaflet (map)
+- Axios (API calls)
+- SessionStorage for authentication tokens
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📂 Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+src/ api/ AuthController.js # Handles Login API assets/ icons/ logo.png # App Logo components/ MapPickerComponent.jsx # Map click to pick location LocationFormComponent.jsx# Create location form LocationMarkerComponent.jsx # Marker display pages/ LoginPage.jsx # Login screen HomePage.jsx # Map with locations ListPage.jsx # List of saved locations EditLocationPage.jsx # Edit location screen redux/ locationSlice.js # Redux logic for locations App.jsx public/ 192.png 512.png favicon.ico .env # API base URL README.md
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🚀 Installation and Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/your-username/location-picker-app.git
+cd location-picker-app
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Install dependencies:
+npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3.Set up your .env file:
+REACT_APP_API_BASE_URL=https://nksoftware-001-site27.anytempurl.com/api
 
-## Learn More
+4.Start the development server:
+npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🔐 Authentication Details
+API Login Endpoint: /api/login
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Stores authToken in sessionStorage
 
-### Code Splitting
+Redirects unauthorized users back to / (Login page)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Example Credentials:
+Email: pyaephyoswe@gmail.com
+Password: Admin@123
 
-### Analyzing the Bundle Size
+🗺️ Map Features
+Pick location on map (sets Latitude and Longitude)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Upload location image
 
-### Making a Progressive Web App
+Drag marker to update location
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+View marker popup showing uploaded image and location details
 
-### Advanced Configuration
+🙌 Credits
+Developed and designed by Pyae Phyo Swe
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+A React.js coding test project demonstrating real-world app development skills, code quality, UI/UX optimization, and scalability.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📜 License
+This project is for learning, testing, and demo purposes only.
+All rights reserved © 2025 by Pyae Phyo Swe.
